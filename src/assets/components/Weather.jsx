@@ -40,7 +40,7 @@ const Weather = ({weatherInfo, handlesubmit}) => {
     "09d":"bg-[url(/public/imgs/weather5.jpg)]",
     "10d":"bg-[url(/public/imgs/weather6.jpg)]",
     "11d":"bg-[url(/public/imgs/weather7.jpg)]",
-    "812d":"bg-[url(/public/imgs/weather8.jpg)]",
+    "12d":"bg-[url(/public/imgs/weather8.jpg)]",
     "01n":"bg-[url(/public/imgs/weather01n.gif)]",
     "02n":"bg-[url(/public/imgs/weather02n.gif)]",
     "03n":"bg-[url(/public/imgs/weather03n.gif)]",
