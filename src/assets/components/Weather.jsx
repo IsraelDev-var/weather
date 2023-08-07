@@ -35,20 +35,20 @@ const Weather = ({weatherInfo, handlesubmit}) => {
     
     "01d":"bg-[url(/public/imgs/weather1.jpg)]",
     "02d":"bg-[url(/public/imgs/weather2.jpg)]",
-    "03d":"bg-[url(/public/imgs/weather1.jpg)]",
+    "03d":"bg-[url(/public/imgs/weather3.jpg)]",
     "04d":"bg-[url(/public/imgs/weather4.jpg)]",
     "09d":"bg-[url(/public/imgs/weather5.jpg)]",
-    "010d":"bg-[url(/public/imgs/weather6.jpg)]",
-    "011d":"bg-[url(/public/imgs/weather7.jpg)]",
-    "0812d":"bg-[url(/public/imgs/weather8.jpg)]",
+    "10d":"bg-[url(/public/imgs/weather6.jpg)]",
+    "11d":"bg-[url(/public/imgs/weather7.jpg)]",
+    "812d":"bg-[url(/public/imgs/weather8.jpg)]",
     "01n":"bg-[url(/public/imgs/weather01n.gif)]",
     "02n":"bg-[url(/public/imgs/weather02n.gif)]",
     "03n":"bg-[url(/public/imgs/weather03n.gif)]",
-    "04n":"bg-[url(/public/imgs/weather01n.gif)]",
-    "09nn":"bg-[url(/public/imgs/weather01n.gif)]",
-    "010n":"bg-[url(/public/imgs/weather01n.gif)]",
-    "011n":"bg-[url(/public/imgs/weather01n.gif)]",
-    "012n":"bg-[url(/public/imgs/weather01n.gif)]",
+    "04n":"bg-[url(/public/imgs/weather04n.gif)]",
+    "9n":"bg-[url(/public/imgs/weather01n.gif)]",
+    "10n":"bg-[url(/public/imgs/weather01n.gif)]",
+    "11n":"bg-[url(/public/imgs/weather01n.gif)]",
+    "12n":"bg-[url(/public/imgs/weather01n.gif)]",
   }
 
 
@@ -121,7 +121,7 @@ const Weather = ({weatherInfo, handlesubmit}) => {
 
     <section className="flex items-center h-40">
     
-    <button className="text-neutral-800 hover:bg-neutral-400 p-2 rounded-2 border-2 border-neutral-400 text-ms hover:text-white" onClick={handleChangesGrado} type="button" >Change to º{iscelcius ? "F":"C"}</button>
+    <button className=" hover:bg-neutral-400 p-2 rounded-2 border-2 border-neutral-400 text-ms hover:text-white" onClick={handleChangesGrado} type="button" >Change to º{iscelcius ? "F":"C"}</button>
     
     </section>
 

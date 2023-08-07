@@ -43,15 +43,9 @@ const handlesubmit = (e) => {
 }
 
   useEffect(() => {
-    
     navigator.geolocation.getCurrentPosition(succes)
     
   }, [city])
-  
-    
-  
-
-
 
   return (
     <>
