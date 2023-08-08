@@ -91,7 +91,7 @@ const Weather = ({weatherInfo, handlesubmit}) => {
         </span>
       
       <div>
-          <img src={`https://openweathermap.org/img/wn/${weatherInfo?.weather[0].icon}`} alt="" />
+          <img src={`https://openweathermap.org/img/wn/${weatherInfo?.weather[0].icon}@4x.png`} alt="" />
       </div>
 
         </section>
