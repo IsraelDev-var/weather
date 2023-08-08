@@ -59,9 +59,9 @@ const handlesubmit = (e) => {
 
 
     
-
-    <Weather weatherInfo={weatherInfo} handlesubmit={handlesubmit} />
-    
+  {
+    weatherInfo && <Weather weatherInfo={weatherInfo} handlesubmit={handlesubmit} />
+  }
     
 
     </main>
