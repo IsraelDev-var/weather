@@ -1,4 +1,5 @@
 import { useState } from "react";
+import DarkMode from "./DarkMode";
 
 
 
@@ -55,12 +56,12 @@ const Weather = ({weatherInfo, handlesubmit}) => {
   return (
     <>
     
-    <section className={`flex flex-col  w-full   justify-center items-center h-screen ${imagesWeather[weatherInfo?.weather[0].icon]} bg-cover bg-center`}>
-    <section>
+  <section  className={` select-none flex flex-col  w-full  h-screen  justify-center items-center  ${imagesWeather[weatherInfo?.weather[0].icon]} bg-cover bg-center grid place-items-center`}>
+    <section className=" pt-2">
       <form
         onClick={handlesubmit}
         className="flex rounded-md overflow-hidden   mx-auto"
-    > 
+        > 
         <input
         id="city"
         placeholder="search cities"
@@ -68,60 +69,62 @@ const Weather = ({weatherInfo, handlesubmit}) => {
         type="text"
         
         />
-        <button id="btn-submit" className="bg-neutral-800 px-2 mb-4">Search</button>
+        <button id="btn-submit" className="   hover:bg-neutral-400 dark:bg-neutral-800 bg-gray-900 hover:text-black px-2 mb-4">Search</button>
 
-    </form>
+      </form>
+
       </section>
 
-    <h2 className=" text-center text-3xl xs:text-xl mb-6">{weatherInfo?.name}, "{weatherInfo?.sys.country}"</h2>
-
-
-      <section className=" grid md:grid-cols-2  pl-2 pr-2 gap-3 min-w-[375px]: ">
+        <h2 className=" font-bold text-neutral-900 dark:text-white p-2 bg-white/30 dark:bg-neutral-800/50 w-[300px] rounded-3xl text-center text-3xl xs:text-xl mb-6">{weatherInfo?.name}, "{weatherInfo?.sys.country}"</h2>
+          <DarkMode />
+            <section  className="  text-neutral-900 dark:text-white grid md:grid-cols-2  pl-2 pr-2 gap-3 min-w-[375px]: ">
         
-        <section className={` bg-neutral-800/50 rounded-3xl p-2 items-center  grid grid-cols-2 gap-4 `}>
+              <section className={`bg-white/30 dark:bg-neutral-800/50 rounded-3xl p-2 items-center  grid grid-cols-2 gap-4 `}>
 
-          <h4 className=" text-center text-ms col-span-2 pt-7 ">{weatherInfo?.weather[0].description}</h4>
+                <h4 className=" font-bold text-center text-ms col-span-2 pt-7 ">{weatherInfo?.weather[0].description}</h4>
           
-          <span>Min {min}º{iscelcius ? "C":"F"}</span>
+                  <span >Min {min}º{iscelcius ? "C":"F"}</span>
         
-          <span>Max {max}º{iscelcius ? "C":"F"}</span>
+                  <span>Max {max}º{iscelcius ? "C":"F"}</span>
         
-        <span className=" text-5xl">
-        {resGrado}º{iscelcius ? "C":"F"}
-        </span>
+                  <span className=" font-bold text-5xl">
+                    {resGrado}º{iscelcius ? "C":"F"}
+                  </span>
       
-      <div>
-          <img src={`https://openweathermap.org/img/wn/${weatherInfo?.weather[0].icon}@4x.png`} alt="" />
-      </div>
+          <div>
+            <img src={`https://openweathermap.org/img/wn/${weatherInfo?.weather[0].icon}@4x.png`} alt="" />
+          </div>
 
-        </section>
+      </section>
   
-      <section className=" justify-around  p-3 bg-neutral-800/50   rounded-3xl flex md:flex-col md:justify-center   gap-6 md:space-y-10 md:max-w-[150px] md:items-start  ">
-      <article className=" flex space-x-3 items-center justify-center ">
-                <div>
-                    <img src="/public/images/speed.png" alt="" />
-                </div>
-                <span>{weatherInfo?.wind.speed } º</span>
-            </article>
-            <article className=" flex space-x-3 items-center">
-                <div>
-                    <img src="/public/images/humidity.png" alt="" />
-                </div>
-                <span>{weatherInfo?.main.humidity} º</span>
-            </article>
-            <article className=" flex space-x-3 items-center">
-                <div>
-                    <img src="/public/images/pressure.png" alt="" />
-                </div>
-                <span>{weatherInfo?.main.pressure} º</span>
-            </article>
-      </section>
+      <section  className=" select-none justify-around  p-3 bg-white/30 dark:bg-neutral-800/50   rounded-3xl flex md:flex-col md:justify-center   gap-6 md:space-y-10 md:max-w-[150px] md:items-start  ">
+        <article className=" flex space-x-3 items-center justify-center ">
+          <div>
+            <img className="" src="/public/images/speed.png" alt="" />
+          </div>
+          <span>{weatherInfo?.wind.speed } m/s</span>
+        </article>
 
-      </section>
+        <article className=" flex space-x-3 items-center">
+          <div>
+            <img src="/public/images/humidity.png" alt="" />
+          </div>
+          <span>{weatherInfo?.main.humidity} %</span>
+        </article>
+
+        <article className=" flex space-x-3 items-center">
+          <div>
+            <img className="" src="/public/images/pressure.png" alt="" />
+          </div>
+          <span className="">{weatherInfo?.main.pressure} %</span>
+            </article>
+    </section>
+
+    </section>
 
     <section className="flex items-center h-40">
     
-    <button className=" hover:bg-neutral-400 p-2 rounded-2 border-2 border-neutral-400 text-ms hover:text-white" onClick={handleChangesGrado} type="button" >Change to º{iscelcius ? "F":"C"}</button>
+    <button  className="   animate-bounce bg-[rgb(4,115,171)] 100%)] btn-change hover:bg-cyan-600 dark:text-black  p-2 rounded-2 border-1 border-neutral-400 text-ms hover:text-white" onClick={handleChangesGrado} type="button" >Change to º{iscelcius ? "F":"C"}</button>
     
     </section>
 
