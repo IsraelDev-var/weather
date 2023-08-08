@@ -1,10 +1,14 @@
+import { useState } from "react"
+
 const DarkMode = () => {
+const [isdark, setIsdark] = useState(true)
    const  handleDarkMode = () =>{
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
        
     } else {
        
-        document.documentElement.classList.toggle('dark')
+        setIsdark(document.documentElement.classList.toggle('dark'))
+        
     }
     
     
@@ -16,12 +20,20 @@ const DarkMode = () => {
     
     localStorage.removeItem('theme')
     }
-
+    
 
 return (
     <>
-    <button >
-    <i  class='bx  cursor-pointer  bxs-moon font-bold text-6xl text-yellow-500  dark:text-neutral-950' onClick={handleDarkMode}></i>
+    <button onClick={handleDarkMode}>
+        {
+            isdark ? 
+            <i className="font-bold text-5xl text-black dark:text-neutral-950 cursor-pointer" class=' text-4xl bx bxs-moon text-black' ></i>
+            :
+            <i className="  font-bold text-5xl" class='bx bxs-sun text-4xl text-yellow-500 '  ></i>
+            
+        }
+        
+        
     </button>
     
     </>
