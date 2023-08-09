@@ -56,7 +56,7 @@ const Weather = ({weatherInfo, handlesubmit}) => {
   return (
     <>
     
-  <section  className={` select-none flex flex-col  w-full  h-screen  justify-center items-center  ${imagesWeather[weatherInfo?.weather[0].icon]} bg-cover bg-center grid place-items-center`}>
+  <section  className={` select-none flex flex-col  w-full  h-full  justify-center items-center  ${imagesWeather[weatherInfo?.weather[0].icon]} bg-cover bg-center grid place-items-center`}>
     <section className=" pt-2">
       <form
         onClick={handlesubmit}
