@@ -100,23 +100,23 @@ const Weather = ({weatherInfo, handlesubmit}) => {
       <section  className=" select-none justify-around  p-3 bg-white/30 dark:bg-neutral-800/50   rounded-3xl flex md:flex-col md:justify-center   gap-6 md:space-y-10 md:max-w-[150px] md:items-start  ">
         <article className=" flex space-x-3 items-center justify-center ">
           <div>
-            <img src="/public/images/speed.png" alt="" />
+            <img src="images/speed.png" alt="" />
           </div>
           <span>{weatherInfo?.wind.speed } m/s</span>
         </article>
 
         <article className=" flex space-x-3 items-center">
           <div>
-            <img src="/public/images/humidity.png" alt="" />
+            <img src="images/humidity.png" alt="" />
           </div>
           <span>{weatherInfo?.main.humidity} %</span>
         </article>
 
         <article className=" flex space-x-3 items-center">
           <div>
-            <img  src="/public/images/pressure.png" alt="" />
+            <img  src="/images/pressure.png" alt="aqui va un icon" />
           </div>
-          <span className="">{weatherInfo?.main.pressure} %</span>
+          <span >{weatherInfo?.main.pressure} %</span>
             </article>
     </section>
 
