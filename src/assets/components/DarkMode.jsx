@@ -21,9 +21,9 @@ return (
 
         {
             isdark ? 
-            <i   class="font-bold  dark:text-neutral-950 cursor-pointer text-4xl bx bxs-moon text-black" ></i>
+            <i   className="font-bold  dark:text-neutral-950 cursor-pointer text-4xl bx bxs-moon text-black" ></i>
             :
-            <i  class="  font-bold bx bxs-sun text-4xl text-yellow-500 "  ></i>
+            <i  className="  font-bold bx bxs-sun text-4xl text-yellow-500 "  ></i>
             
         }
         </button>
