@@ -11,6 +11,7 @@ import Weather from './assets/components/Weather'
 
 
 
+
 function App() {
   const [weatherInfo, setWeatherInfo] = useState(null)
   const [city, setNameCity] = useState([])
@@ -55,7 +56,8 @@ const handlesubmit = (e) => {
   text-white
     font-lato flex
     justify-center
-    items-center  '>
+    items-center  
+    '>
 
 
     

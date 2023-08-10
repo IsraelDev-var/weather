@@ -56,7 +56,7 @@ const Weather = ({weatherInfo, handlesubmit}) => {
   return (
     <>
     
-  <section  className={` select-none flex flex-col  w-full  h-full  justify-center items-center  ${imagesWeather[weatherInfo?.weather[0].icon]} bg-cover bg-center grid place-items-center`}>
+  <section  className={` min-h-screen select-none flex flex-col  w-full  h-full  justify-center items-center  ${imagesWeather[weatherInfo?.weather[0].icon]} bg-cover bg-center grid place-items-center`}>
     <section className=" pt-2">
       <form
         onClick={handlesubmit}
@@ -70,13 +70,13 @@ const Weather = ({weatherInfo, handlesubmit}) => {
         
         />
         <button id="btn-submit" className="   hover:bg-neutral-400 dark:bg-neutral-800 bg-gray-900 hover:text-black px-2 mb-4">Search</button>
-
+        
       </form>
 
       </section>
 
         <h2 className=" font-bold text-neutral-900 dark:text-white p-2 bg-white/30 dark:bg-neutral-800/50 w-[300px] rounded-3xl text-center text-3xl xs:text-xl mb-6">{weatherInfo?.name}, "{weatherInfo?.sys.country}"</h2>
-          <DarkMode />
+          
             <section  className="  text-neutral-900 dark:text-white grid md:grid-cols-2  pl-2 pr-2 gap-3 min-w-[375px]: ">
         
               <section className={`bg-white/30 dark:bg-neutral-800/50 rounded-3xl p-2 items-center  grid grid-cols-2 gap-4 `}>
@@ -124,7 +124,7 @@ const Weather = ({weatherInfo, handlesubmit}) => {
 
     <section className="flex items-center h-40">
     
-    <button  className="   animate-bounce bg-[rgb(4,115,171)] 100%)] btn-change hover:bg-cyan-600 dark:text-black  p-2 rounded-2 border-1 border-neutral-400 text-ms hover:text-white" onClick={handleChangesGrado} type="button" >Change to º{iscelcius ? "F":"C"}</button>
+    <button  className=" bg-[rgb(4,115,171)] 100%)] btn-change hover:bg-cyan-600 dark:text-black  p-2 rounded-2 border-1 border-neutral-400 text-ms hover:text-white" onClick={handleChangesGrado} type="button" >Change to º{iscelcius ? "F":"C"}</button>
     
     </section>
 
